@@ -3,7 +3,6 @@
 
 using namespace std;
 
-
 vector<int>arr = {2, -5, -1, -3, 7, -5, -6, 10};
 
 void kadane() {
@@ -28,7 +27,6 @@ void kadane() {
   cout << "start" << endl;
   for (int i = start; i <= finish; i++) {
     cout << arr[i] << endl;
-    
   }
   cout << "finish" << endl;
 }
