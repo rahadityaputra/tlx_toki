@@ -1,11 +1,9 @@
 #include <iostream>
-#include <vector>
-
 
 using namespace std;
 
 void solution(long long N, int x) {
-
+ 
   string result = "";
   while(N != 0) {
     int p = N % x;
