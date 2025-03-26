@@ -22,11 +22,29 @@ void klik(int x, int y, int warna){
   }
 }
 
+void solution() {
+	int terbesar = 0;
+	for (int i = 0; i < arr.size(); i++) {
+	   for (int j = 0; j < arr[i].size(); j++) {
+	   	klik(i, j, arr[i][j]);
+                for (int k = 0; k < arr.size(); k++) {
+                	for (int l = 0; l < arr[k].size(); l++) {
+                		sudahDikunjungi[k][l] = false;
+                	}	
+                }			
+		if (terbesar < (T * (T - 1))) {
+			terbesar = (T * (T - 1)) ;
+		}
+
+		T = 0;
+	   }
+	}
+}
 
 int main(){
     cin >> M >> N;
     
-    arr.resize(5)
+    arr.resize(M);
     sudahDikunjungi.resize(M);
 
     for(auto &row : arr) {
@@ -45,8 +63,5 @@ int main(){
       }
     }
 
-    cin >> B >> K;
-
-    klik(B, K, arr[B][K]);
-    cout << T * (T - 1) << endl;
+    solution();
 }

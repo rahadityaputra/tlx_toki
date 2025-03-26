@@ -1,6 +1,6 @@
 #include <iostream>
-
 using namespace std;
+
 
 void solution(long long N, int x) {
  
